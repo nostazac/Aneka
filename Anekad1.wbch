@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<project version="1.0">
+   <display-name>domo1</display-name>
+   <content>
+      <psm xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <name>domo1</name>
+         <description>My first progam </description>
+         <workspace>C:\Users\HYDRA\Desktop\domos</workspace>
+         <parameters>
+            <single name="Sample" type="" comment="" value="String" />
+            <random name="Seed" type="Random:Float" comment="" minValue="10" maxValue="56" />
+            <range name="Range" type="Range:Integer" comment="" from="10" to="30" interval="5" />
+            <enum name="Enum" type="Enum:String" comment="">
+               <value>String</value>
+            </enum>
+         </parameters>
+         <sharedFiles />
+         <task>
+            <inputs />
+            <outputs />
+            <commands>
+               <execute cmd="Execute" />
+               <substitute src="($Sample)" dest="($$ID)" />
+               <copy src="($Range)($Seed)" dest="($Seed)" />
+            </commands>
+         </task>
+      </psm>
+   </content>
+</project>
